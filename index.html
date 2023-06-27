@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>VR A-Frame Explorer</title>
+		<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			<a-assets>
+				<a-asset-item
+					id="house"
+					src="/models/autumn_house/scene.gltf"
+				></a-asset-item>
+			</a-assets>
+
+			<a-entity
+				id="camera"
+				camera
+				movement-controls="fly:true"
+				look-controls
+				wasd-controls="acceleration:100"
+				position="0 2 0"
+			></a-entity>
+			<a-entity
+				position="0 -15 0"
+				rotation="0 -90 0"
+				gltf-model="#house"
+			></a-entity>
+		</a-scene>
+		<script type="module" src="src/main.js"></script>
+	</body>
+</html>

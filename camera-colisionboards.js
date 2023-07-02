@@ -1,4 +1,4 @@
-AFRAME.registerComponent('camera-limits-space', {
+AFRAME.registerComponent('camera-limits', {
     init: function () {
       // Obtém o elemento do modelo GLTF
       const modelEl = document.querySelector('#house');

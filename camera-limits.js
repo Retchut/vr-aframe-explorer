@@ -1,4 +1,4 @@
-AFRAME.registerComponent('camera-limits-rotation'', {
+AFRAME.registerComponent('camera-limits', {
     init: function () {
       // Define os limites de rotação da câmera
       this.maxRotationLeftRight = 90; // em graus

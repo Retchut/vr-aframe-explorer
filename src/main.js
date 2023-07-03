@@ -1,3 +1,3 @@
 /* global AFRAME, THREE */
 
-import "./Components/CameraDebug";
+import "./Components/Camera/CameraDebug";

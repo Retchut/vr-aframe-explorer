@@ -1,6 +1,6 @@
 /* global AFRAME, THREE */
 
-import Debug from "../Utils/debug";
+import Debug from "../../Utils/debug";
 
 const camera = document.querySelector("#camera");
 

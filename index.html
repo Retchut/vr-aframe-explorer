@@ -9,12 +9,15 @@
 	</head>
 	<body>
 		<a-scene>
+			<!-- Assets -->
 			<a-assets>
 				<a-asset-item
 					id="house"
 					src="/models/autumn_house/scene.gltf"
 				></a-asset-item>
 			</a-assets>
+
+			<!-- Camera with cursor child -->
 			<a-entity
 				id="camera"
 				camera
@@ -32,6 +35,7 @@
 				</a-entity>
 			</a-entity>
 
+			<!-- Buttons -->
 			<a-entity
 				button="name: button1; action: do something lol"
 				position="0 2 -5"
@@ -44,14 +48,15 @@
 				geometry="primitive: box"
 			></a-entity>
 
+			<!-- Scene model -->
 			<a-entity
 				position="0 -15 0"
 				rotation="0 -90 0"
 				gltf-model="#house"
 			></a-entity>
-			<!-- <a-entity camera-debug></a-entity> -->
 
-			<!-- Botões para ajustar as configurações de cor -->
+			<!-- Debug -->
+			<!-- <a-entity camera-debug></a-entity> -->
 		</a-scene>
 		<script type="module" src="src/main.js"></script>
 	</body>

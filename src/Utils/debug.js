@@ -1,9 +1,5 @@
 class Debug {
-	static debugPosition = (
-		obj: THREE.Object3D,
-		position: THREE.Vector3,
-		quaternion: THREE.Quaternion
-	): void => {
+	static debugPosition = (obj, position, quaternion) => {
 		// update position and rotation of the camera
 		obj.getWorldPosition(position);
 		obj.getWorldQuaternion(quaternion);

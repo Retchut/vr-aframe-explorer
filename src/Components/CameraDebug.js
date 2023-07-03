@@ -1,6 +1,6 @@
 import Debug from "../Utils/debug";
 
-const camera: any | null = document.querySelector("#camera");
+const camera = document.querySelector("#camera");
 
 // define a component we can later use in the html file
 AFRAME.registerComponent("camera-debug", {

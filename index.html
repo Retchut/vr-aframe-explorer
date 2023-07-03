@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>VR A-Frame Explorer</title>
 		<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
 	</head>
 	<body>
 		<a-scene>
@@ -24,12 +25,26 @@
 				wasd-controls="acceleration:100"
 				position="0 2 0"
 			></a-entity>
-			<a-entity
-				position="0 -15 0"
-				rotation="0 -90 0"
-				gltf-model="#house"
-			></a-entity>
+
+			<a-entity camera-limits>
+				<a-camera wasd-controls-enabled="false"></a-camera>
+			</a-entity>
+			<a-entity id="teleport-button" geometry="primitive: box" position="0 1.5 -5" material="color: purple" text="value: Teleport" camera-limits></a-entity>
+			<a-entity id="collision-sound" sound="src: url(path/to/collision_sound.mp3)"></a-entity>
+			<a-entity position="0 -15 0" rotation="0 -90 0" gltf-model-plus="#house" aabb-collider></a-entity>
 			<a-entity camera-debug></a-entity>
+
+			<!-- Botões para ajustar as configurações de cor -->
+			<button id="btnBrightnessUp">Aumentar Brilho</button>
+			<button id="btnBrightnessDown">Diminuir Brilho</button>
+			<button id="btnContrastUp">Aumentar Contraste</button>
+			<button id="btnContrastDown">Diminuir Contraste</button>
+			<button id="btnSaturationUp">Aumentar Saturação</button>
+			<button id="btnSaturationDown">Diminuir Saturação</button>
+			<button id="btnLightnessUp">Aumentar Luminosidade</button>
+			<button id="btnLightnessDown">Diminuir Luminosidade</button>
+			<button id="color-filter-button">Aplicar Filtro de Cor</button>
+			
 		</a-scene>
 		<script type="module" src="src/main.ts"></script>
 	</body>

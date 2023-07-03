@@ -1,3 +1,5 @@
+/* global AFRAME, THREE */
+
 class Debug {
 	static debugPosition = (obj, position, quaternion) => {
 		// update position and rotation of the camera

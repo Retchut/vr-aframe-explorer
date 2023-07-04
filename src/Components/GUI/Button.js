@@ -10,7 +10,8 @@ AFRAME.registerComponent("button", {
 		let callback;
 		switch (action) {
 			default:
-				console.log("The callback " + action + " has not been implemented");
+				callback = () =>
+					console.error("Callback has not been implemented: " + action);
 		}
 		this.el.addEventListener("click", callback);
 	},

@@ -15,6 +15,7 @@
 					id="house"
 					src="/models/autumn_house/scene.gltf"
 				></a-asset-item>
+				<a-asset-item id="navmesh" src="/models/navmesh.glb"></a-asset-item>
 			</a-assets>
 
 			<!-- Camera with cursor child -->
@@ -37,13 +38,13 @@
 
 			<!-- Buttons -->
 			<a-entity
-				button="name: button1; action: do something lol"
+				button="name: button1; action: do something"
 				position="0 2 -5"
 				geometry="primitive: box"
 			></a-entity>
 
 			<a-entity
-				button="name: button2; action: shieeet"
+				button="name: button2; action: do something 2"
 				position="2 2 -5"
 				geometry="primitive: box"
 			></a-entity>
@@ -53,6 +54,11 @@
 				position="0 -15 0"
 				rotation="0 -90 0"
 				gltf-model="#house"
+			></a-entity>
+			<a-entity
+				position="0 -15 0"
+				rotation="0 -90 0"
+				gltf-model="#navmesh"
 			></a-entity>
 
 			<!-- Debug -->

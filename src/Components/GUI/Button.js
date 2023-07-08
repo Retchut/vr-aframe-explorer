@@ -7,6 +7,7 @@ AFRAME.registerComponent("button", {
 		const action = this.data.action;
 
 		// function we'll assign to this button's event listener
+		// add more string values and corresponding actions here
 		let callback;
 		switch (action) {
 			default:

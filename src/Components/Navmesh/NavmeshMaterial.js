@@ -19,9 +19,8 @@ AFRAME.registerComponent("navmesh-material", {
 			mesh.traverse((node) => {
 				if (node.name !== "Scene") {
 					node.material.color.set(this.data.color);
-					node.material.transparent = true;
+					node.material.transparent = true; // always transparent. Amount of transparency controlled by the opacity property
 					node.material.opacity = this.data.opacity;
-					console.log(node.material);
 				}
 			});
 		});

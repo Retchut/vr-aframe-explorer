@@ -37,7 +37,6 @@ AFRAME.registerComponent("navmesh-constraint", {
 
 		// update previous valid position if we intersected
 		if (intersection.length) {
-			console.log(intersection[0].point.y + this.data.height);
 			const newPos = new THREE.Vector3(
 				currPos.x,
 				intersection[0].point.y + this.data.height,

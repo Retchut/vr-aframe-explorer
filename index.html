@@ -12,10 +12,13 @@
 			<!-- Assets -->
 			<a-assets>
 				<a-asset-item
-					id="house"
+					id="house-model"
 					src="/models/autumn_house/scene.gltf"
 				></a-asset-item>
-				<a-asset-item id="navmesh" src="/models/navmesh.glb"></a-asset-item>
+				<a-asset-item
+					id="navmesh-model"
+					src="/models/navmesh.glb"
+				></a-asset-item>
 			</a-assets>
 
 			<!-- Camera with cursor child -->
@@ -26,6 +29,7 @@
 				look-controls
 				wasd-controls="acceleration:100"
 				position="0 4 0"
+				navmesh-constraint="navmeshID: #navmesh; height: 4"
 			>
 				<a-entity
 					cursor
@@ -53,12 +57,13 @@
 			<a-entity
 				position="0 0 0"
 				rotation="0 0 0"
-				gltf-model="#house"
+				gltf-model="#house-model"
 			></a-entity>
 			<a-entity
+				id="navmesh"
 				position="0 0 0"
 				rotation="0 0 0"
-				gltf-model="#navmesh"
+				gltf-model="#navmesh-model"
 			></a-entity>
 
 			<!-- Debug -->

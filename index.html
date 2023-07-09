@@ -40,6 +40,13 @@
 				</a-entity>
 			</a-entity>
 
+			<a-entity
+				button="name: uitest; action:uitesting"
+				position="25 5 0"
+				rotation="0 -90 0"
+				geometry="primitive: plane"
+			></a-entity>
+
 			<!-- Buttons -->
 			<a-entity
 				button="name: button1; action: do something"
@@ -61,7 +68,7 @@
 			></a-entity>
 			<a-entity
 				id="navmesh"
-				navmesh-material
+				navmesh-material="opacity: 0.0; color: #6bb7cf"
 				position="0 0 0"
 				rotation="0 0 0"
 				gltf-model="#navmesh-model"

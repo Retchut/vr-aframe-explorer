@@ -1,3 +1,7 @@
+/* global AFRAME, THREE */
+
+import { changeNavmeshOpacity } from "../Navmesh/NavmeshMaterial";
+
 AFRAME.registerComponent("button", {
 	schema: {
 		name: { type: "string", default: "unnamed" },
@@ -10,6 +14,9 @@ AFRAME.registerComponent("button", {
 		// add more string values and corresponding actions here
 		let callback;
 		switch (action) {
+			case "uitesting":
+				callback = () => changeNavmeshOpacity(1.0);
+				break;
 			default:
 				callback = () =>
 					console.error("Callback has not been implemented: " + action);

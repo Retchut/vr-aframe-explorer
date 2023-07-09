@@ -1,5 +1,15 @@
 /* global AFRAME, THREE */
 
+import { setMaterialProps } from "../../Utils/materialOps";
+
+function changeNavmeshOpacity(newOpacity) {
+	console.log("setting");
+	const navmeshEl = document.getElementById("navmesh");
+	navmeshEl.setAttribute("navmesh-material", "opacity", newOpacity);
+	const newAttr = navmeshEl.getAttribute("navmesh-material");
+	setMaterialProps(navmeshEl, newAttr.color, newAttr.opacity);
+}
+
 AFRAME.registerComponent("navmesh-material", {
 	schema: {
 		opacity: {
@@ -13,16 +23,10 @@ AFRAME.registerComponent("navmesh-material", {
 	},
 	init: function () {
 		// wait for model to load
-		this.el.addEventListener("model-loaded", () => {
-			const mesh = this.el.getObject3D("mesh");
-			// set material for all nodes in the mesh
-			mesh.traverse((node) => {
-				if (node.name !== "Scene") {
-					node.material.color.set(this.data.color);
-					node.material.transparent = true; // always transparent. Amount of transparency controlled by the opacity property
-					node.material.opacity = this.data.opacity;
-				}
-			});
-		});
+		this.el.addEventListener("model-loaded", () =>
+			setMaterialProps(this.el, this.data.color, this.data.opacity)
+		);
 	},
 });
+
+export { changeNavmeshOpacity };

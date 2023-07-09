@@ -34,6 +34,14 @@ AFRAME.registerComponent("mesh-ui", {
 			type: "string",
 			default: "./public/fonts/Roboto/Roboto-msdf.png",
 		},
+		fontSize: {
+			type: "float",
+			default: 0.1,
+		},
+		fontColor: {
+			type: "string",
+			default: "#FFF",
+		},
 	},
 	init: function () {
 		this.container = new ThreeMeshUI.Block({
@@ -45,6 +53,7 @@ AFRAME.registerComponent("mesh-ui", {
 		});
 		const text = new ThreeMeshUI.Text({
 			content: this.data.text,
+			fontColor: new THREE.Color(this.data.fontColor),
 			fontSize: this.data.fontSize,
 		});
 		//-------------------

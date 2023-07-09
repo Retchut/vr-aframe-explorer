@@ -16,5 +16,8 @@
 		"aframe-scene",
 		"webvr",
 		"vr"
-	]
+	],
+	"dependencies": {
+		"three-mesh-ui": "^6.5.4"
+	}
 }

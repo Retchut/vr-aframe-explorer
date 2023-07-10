@@ -24,7 +24,7 @@ AFRAME.registerComponent("navmesh-material", {
 			type: "float",
 		},
 		color: {
-			default: "#6bb7cf",
+			default: "#c4809f",
 			type: "string", // because the color type doesn't do any parsing, so it's functionally equivalent to a string
 		},
 	},

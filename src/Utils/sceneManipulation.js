@@ -60,4 +60,36 @@ function insertModel(modelID, navmeshID) {
 	appendSceneNodes([modelEntity, navmeshModelEntity]);
 }
 
-export { insertCamera, insertAssets, insertModel };
+function insertTestUI() {
+	const button1 = document.createElement("a-entity");
+	button1.setAttribute(
+		"button",
+		"name: opacity decrease; action:nav-opacity-decrease"
+	);
+	button1.setAttribute("position", "24.99 4.5 1");
+	button1.setAttribute("rotation", "-20 -90 0");
+	button1.setAttribute("geometry", "primitive: plane");
+	button1.setAttribute("material", "color: #F00");
+
+	const button2 = document.createElement("a-entity");
+	button2.setAttribute(
+		"button",
+		"name: opacity increase; action:nav-opacity-increase"
+	);
+	button2.setAttribute("position", "24.99 4.5 3");
+	button2.setAttribute("rotation", "-20 -90 0");
+	button2.setAttribute("geometry", "primitive: plane");
+	button2.setAttribute("material", "color: #00F");
+
+	const ui = document.createElement("a-entity");
+	ui.setAttribute(
+		"mesh-ui",
+		"width: 5; height:4.5; padding: 0.2; fontSize: 0.2; text: Test UI; text2: decrease navmesh opacity; text3: increase navmesh opacity"
+	);
+	ui.setAttribute("position", "25 5 2");
+	ui.setAttribute("rotation", "-20 -90 0");
+
+	appendSceneNodes([ui, button1, button2]);
+}
+
+export { insertCamera, insertAssets, insertModel, insertTestUI };

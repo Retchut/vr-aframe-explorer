@@ -4,6 +4,7 @@ import {
 	insertCamera,
 	insertAssets,
 	insertModel,
+	insertTestUI,
 } from "./Utils/sceneManipulation";
 
 import "./Components/Camera/CameraDebug";
@@ -24,3 +25,5 @@ insertAssets(
 	"/models/navmesh.glb"
 );
 insertModel(MODEL_ID, NAVMESH_ID);
+
+insertTestUI();

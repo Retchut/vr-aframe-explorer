@@ -17,10 +17,10 @@ AFRAME.registerComponent("button", {
 		// add more string values and corresponding actions here
 		let callback;
 		switch (action) {
-			case "nav-transparent":
+			case "nav-opacity-decrease":
 				callback = () => varyNavmeshOpacity(-0.1);
 				break;
-			case "nav-opaque":
+			case "nav-opacity-increase":
 				callback = () => varyNavmeshOpacity(0.1);
 				break;
 			default:

@@ -11,22 +11,12 @@
 	<body>
 		<a-scene>
 			<!-- Assets -->
-			<a-assets>
-				<a-asset-item
-					id="house-model"
-					src="/models/autumn_house/scene.gltf"
-				></a-asset-item>
-				<a-asset-item
-					id="navmesh-model"
-					src="/models/navmesh.glb"
-				></a-asset-item>
-			</a-assets>
+			<a-assets></a-assets>
 
 			<!-- Camera with cursor child -->
 			<a-entity
 				id="camera"
 				camera
-				movement-controls="fly: true;"
 				look-controls
 				wasd-controls="acceleration:100"
 				position="0 4 0"
@@ -63,20 +53,6 @@
 				mesh-ui="width: 5; height:4.5; padding: 0.2; fontSize: 0.2; text: Test UI; text2: decrease navmesh opacity; text3: increase navmesh opacity"
 				position="25 5 2"
 				rotation="-20 -90 0"
-			></a-entity>
-
-			<!-- Scene model -->
-			<a-entity
-				position="0 0 0"
-				rotation="0 0 0"
-				gltf-model="#house-model"
-			></a-entity>
-			<a-entity
-				id="navmesh"
-				navmesh-material
-				position="0 0 0"
-				rotation="0 0 0"
-				gltf-model="#navmesh-model"
 			></a-entity>
 
 			<!-- Debug -->

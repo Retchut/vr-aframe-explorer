@@ -10,9 +10,6 @@ AFRAME.registerComponent("camera-debug", {
 	 * We use IIFE (immediately-invoked function expression) to only allocate one
 	 * vector or euler and not re-create on every tick to save memory.
 	 */
-	init: function () {
-		console.log("Camera Debug Component");
-	},
 	tick: (function () {
 		// @ts-ignore
 		let position = new THREE.Vector3();

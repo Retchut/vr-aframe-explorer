@@ -11,7 +11,6 @@ function varyNavmeshOpacity(variation) {
 }
 
 function changeNavmeshOpacity(newOpacity) {
-	console.log("setting");
 	const navmeshEl = document.getElementById("navmesh");
 	navmeshEl.setAttribute("navmesh-material", "opacity", newOpacity);
 	const newAttr = navmeshEl.getAttribute("navmesh-material");

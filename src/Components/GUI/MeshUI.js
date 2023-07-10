@@ -28,11 +28,11 @@ AFRAME.registerComponent("mesh-ui", {
 		padding: { type: "float", default: 0.0 },
 		fontFamilyFile: {
 			type: "string",
-			default: "./public/fonts/Roboto/Roboto-msdf.json",
+			default: "./fonts/Roboto/Roboto-msdf.json",
 		},
 		fontTextureFile: {
 			type: "string",
-			default: "./public/fonts/Roboto/Roboto-msdf.png",
+			default: "./fonts/Roboto/Roboto-msdf.png",
 		},
 		fontSize: {
 			type: "float",

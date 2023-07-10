@@ -6,6 +6,31 @@ function appendAssetNodes(nodes) {
 function appendSceneNodes(nodes) {
 	const scene = document.querySelector("a-scene");
 	scene.append(...nodes);
+	scene.flushToDOM();
+}
+
+function insertCamera(pointer) {
+	const camera = document.createElement("a-entity");
+	camera.setAttribute("id", "camera");
+	camera.setAttribute("camera", "");
+	camera.setAttribute("look-controls", "");
+	camera.setAttribute("wasd-controls", "acceleration:100");
+	camera.setAttribute("position", "0 4 0");
+	camera.setAttribute("navmesh-constraint", "navmeshID: #navmesh; height: 4");
+
+	if (pointer) {
+		const pointerEl = document.createElement("a-entity");
+		pointerEl.setAttribute("cursor", "");
+		pointerEl.setAttribute(
+			"geometry",
+			"primitive: ring; radiusInner: 0.00005; radiusOuter: 0.0001"
+		);
+		pointerEl.setAttribute("position", "0 0 -0.01");
+		pointerEl.setAttribute("material", "color: gray; shader: flat");
+		camera.appendChild(pointerEl);
+	}
+
+	appendSceneNodes([camera]);
 }
 
 function insertAssets(modelID, modelPath, navmeshID, navmeshPath) {
@@ -35,4 +60,4 @@ function insertModel(modelID, navmeshID) {
 	appendSceneNodes([modelEntity, navmeshModelEntity]);
 }
 
-export { insertAssets, insertModel };
+export { insertCamera, insertAssets, insertModel };

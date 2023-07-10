@@ -5,31 +5,14 @@
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>VR A-Frame Explorer</title>
-		<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+		<!-- <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> -->
+		<script src="https://aframe.io/releases/1.4.0/aframe.js"></script>
 		<script type="module" src="src/main.js"></script>
 	</head>
 	<body>
 		<a-scene>
 			<!-- Assets -->
 			<a-assets></a-assets>
-
-			<!-- Camera with cursor child -->
-			<a-entity
-				id="camera"
-				camera
-				look-controls
-				wasd-controls="acceleration:100"
-				position="0 4 0"
-				navmesh-constraint="navmeshID: #navmesh; height: 4"
-			>
-				<a-entity
-					cursor
-					geometry="primitive: ring; radiusInner: 0.00005; radiusOuter: 0.0001"
-					position="0 0 -0.01"
-					material="color: gray; shader: flat"
-				>
-				</a-entity>
-			</a-entity>
 
 			<a-sky color="#88c6eb"></a-sky>
 

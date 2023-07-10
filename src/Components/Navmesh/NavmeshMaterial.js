@@ -1,6 +1,17 @@
 /* global AFRAME, THREE */
 
+import { clamp } from "../../Utils/mathOps";
 import { setMaterialProps } from "../../Utils/materialOps";
+
+function varyNavmeshOpacity(variation) {
+	const navmeshEl = document.getElementById("navmesh");
+	const originalOpacity = navmeshEl.getAttribute("navmesh-material").opacity;
+	const newOpacity = clamp(originalOpacity + variation, 0.0, 1.0);
+	console.log(newOpacity);
+	navmeshEl.setAttribute("navmesh-material", "opacity", newOpacity);
+	const newAttr = navmeshEl.getAttribute("navmesh-material");
+	setMaterialProps(navmeshEl, newAttr.color, newAttr.opacity);
+}
 
 function changeNavmeshOpacity(newOpacity) {
 	console.log("setting");
@@ -29,4 +40,4 @@ AFRAME.registerComponent("navmesh-material", {
 	},
 });
 
-export { changeNavmeshOpacity };
+export { varyNavmeshOpacity, changeNavmeshOpacity };

@@ -1,6 +1,9 @@
 /* global AFRAME, THREE */
 
-import { changeNavmeshOpacity } from "../Navmesh/NavmeshMaterial";
+import {
+	varyNavmeshOpacity,
+	changeNavmeshOpacity,
+} from "../Navmesh/NavmeshMaterial";
 
 AFRAME.registerComponent("button", {
 	schema: {
@@ -15,10 +18,10 @@ AFRAME.registerComponent("button", {
 		let callback;
 		switch (action) {
 			case "nav-transparent":
-				callback = () => changeNavmeshOpacity(0.0);
+				callback = () => varyNavmeshOpacity(-0.1);
 				break;
 			case "nav-opaque":
-				callback = () => changeNavmeshOpacity(1.0);
+				callback = () => varyNavmeshOpacity(0.1);
 				break;
 			default:
 				callback = () =>

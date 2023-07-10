@@ -44,41 +44,107 @@ AFRAME.registerComponent("mesh-ui", {
 		},
 	},
 	init: function () {
-		this.container = new ThreeMeshUI.Block({
+		const container = new ThreeMeshUI.Block({
 			width: this.data.width,
 			height: this.data.height,
 			padding: this.data.padding,
 			fontFamily: this.data.fontFamilyFile,
 			fontTexture: this.data.fontTextureFile,
+			justifyContent: "start",
+			backgroundOpacity: 0.2,
 		});
-		const text = new ThreeMeshUI.Text({
+		this.el.object3D.add(container);
+
+		//
+
+		const titleBlock = new ThreeMeshUI.Block({
+			height: 0.5,
+			width: this.data.width - 3,
+			margin: 0.025,
+			justifyContent: "center",
+		});
+
+		const title = new ThreeMeshUI.Text({
 			content: this.data.text,
 			fontColor: new THREE.Color(this.data.fontColor),
 			fontSize: this.data.fontSize,
 		});
-		//-------------------
 
-		// const interactiveRaycaster = new InteractiveRaycaster(
-		// 	camera,
-		// 	scene,
-		// 	renderer,
-		// 	vrControl
-		// );
-		// interactiveRaycaster.start();
+		titleBlock.add(title);
 
-		// const button = new ThreeMeshUI.Text({ textContent: "click me" });
-		// scene.add(button);
+		container.add(titleBlock);
 
-		// interactiveRaycaster.addObject(button);
+		// left
+		const leftblock = new ThreeMeshUI.Block({
+			height: 1,
+			width: this.data.width / 2 - 1,
+			margin: 0.025,
+			padding: 0.025,
+			justifyContent: "center",
+		});
 
-		// // Interaction from raycaster with button can now be retrieved as event
-		// buttonPrevious.addEventListener("click", (event) => {
-		// 	console.log("me clicked, me happy!", event);
-		// });
-		//-------------------
+		const leftTextBlock = new ThreeMeshUI.Block({
+			height: 1,
+			width: 1.5,
+			textAlign: "center",
+			justifyContent: "center",
+		});
 
-		this.container.add(text);
-		this.el.object3D.add(this.container);
+		const text2 = new ThreeMeshUI.Text({
+			content: this.data.text2,
+			fontColor: new THREE.Color(this.data.fontColor),
+			fontSize: this.data.fontSize,
+		});
+
+		leftTextBlock.add(text2);
+		leftblock.add(leftTextBlock);
+
+		//
+
+		const rightBlock = new ThreeMeshUI.Block({
+			height: 1,
+			width: this.data.width / 2 - 1,
+			margin: 0.025,
+			padding: 0.025,
+			justifyContent: "center",
+		});
+
+		const rightTextBlock = new ThreeMeshUI.Block({
+			height: 1,
+			width: 1.5,
+			margin: 0.05,
+			padding: 0.02,
+			textAlign: "center",
+			justifyContent: "center",
+		});
+		const text3 = new ThreeMeshUI.Text({
+			content: this.data.text3,
+			fontColor: new THREE.Color(this.data.fontColor),
+			fontSize: this.data.fontSize,
+		});
+
+		rightTextBlock.add(text3);
+
+		rightBlock.add(rightTextBlock);
+
+		const middleBlock = new ThreeMeshUI.Block({
+			height: 1,
+			width: this.data.width / 10,
+			margin: 0.025,
+			padding: 0.025,
+			justifyContent: "center",
+			backgroundOpacity: 0,
+		});
+
+		const contentContainer = new ThreeMeshUI.Block({
+			contentDirection: "row",
+			padding: 0.2,
+			margin: 0.025,
+			backgroundOpacity: 0,
+		});
+
+		contentContainer.add(leftblock, middleBlock, rightBlock);
+		container.add(contentContainer);
 	},
 	tick: function () {
 		ThreeMeshUI.update();

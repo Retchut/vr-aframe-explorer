@@ -1,7 +1,7 @@
 function HomeTemplate() {
-	const head = html``;
+	const head = ``;
 
-	const html = html`
+	const html = `
 		<h1>home page</h1>
 		<p>welcome!</p>
 		<a href="/viewer">Go to viewer</a>

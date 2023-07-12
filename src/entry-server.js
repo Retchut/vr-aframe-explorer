@@ -1,15 +1,14 @@
-import HomeTemplate from "./Templates/Home";
-import ViewerTemplate from "./Templates/Viewer";
+import HomeTemplate from "./Templates/Home/Home";
+import ViewerTemplate from "./Templates/Viewer/Viewer";
 
 export function render(url, manifest) {
 	switch (url) {
 		case "":
-			console.log("home");
 			return HomeTemplate();
 		case "viewer":
-			console.log("viewer");
-			return ViewerTemplate();
+			return ViewerTemplate(0);
+		default:
+			const html = "<h1>Error fetching page</h1>";
+			return { html };
 	}
-
-	return { html };
 }

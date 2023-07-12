@@ -16,14 +16,14 @@ import "./Components/GUI/MeshUI";
 const MODEL_ID = "model",
 	NAVMESH_ID = "navmesh-model";
 
-insertCamera(true);
+// insertCamera(true);
 
-insertAssets(
-	MODEL_ID,
-	"/models/autumn_house/scene.gltf",
-	NAVMESH_ID,
-	"/models/navmesh.glb"
-);
-insertModel(MODEL_ID, NAVMESH_ID);
+// insertAssets(
+// 	MODEL_ID,
+// 	"/models/autumn_house/scene.gltf",
+// 	NAVMESH_ID,
+// 	"/models/navmesh.glb"
+// );
+// insertModel(MODEL_ID, NAVMESH_ID);
 
-insertTestUI();
+// insertTestUI();

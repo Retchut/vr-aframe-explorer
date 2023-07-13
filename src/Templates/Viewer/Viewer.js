@@ -1,8 +1,16 @@
 import { Assets, Models, Camera, TestUI } from "./SceneComponents";
+import examples from "../../Data/examples.json";
 
-import fs from "fs";
+import MissingExample from "../Error/MissingExample";
 
 function ViewerTemplate(exampleNum) {
+	// check if example exists
+	if (exampleNum === -1 || exampleNum >= examples.length) {
+		const head = "";
+		const html = MissingExample();
+		return { head, html };
+	}
+
 	const head = `
 		<!-- <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> -->
 		<script src="https://aframe.io/releases/1.4.0/aframe.js"></script>
@@ -12,7 +20,7 @@ function ViewerTemplate(exampleNum) {
 	<a-scene>
 		<!-- Assets -->
 		<a-assets>
-		${Assets(exampleNum)}
+		${Assets(examples[exampleNum])}
 		</a-assets>
 
 		<a-sky color="#88c6eb"></a-sky>

@@ -1,25 +1,18 @@
-import examples from "../../Data/examples.json";
-
 const MODEL_ID = "model";
 const NAVMESH_MODEL_ID = "navmesh-model";
 const NAVMESH_EL_ID = "navmesh";
 
-function Assets(exampleNum) {
-	let html = "";
-	if (exampleNum < examples.length)
-		html = `
+function Assets(example) {
+	let html = `
             <a-asset-item
                 id=${MODEL_ID}
-                src=${examples[exampleNum].src}
+                src=${example.src}
             ></a-asset-item>
             <a-asset-item
                 id=${NAVMESH_MODEL_ID}
-                src=${examples[exampleNum].nav_src}
+                src=${example.nav_src}
             ></a-asset-item>
 		`;
-	else {
-		throw new Error("No such example exists");
-	}
 
 	return html;
 }

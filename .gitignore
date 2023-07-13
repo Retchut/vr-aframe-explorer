@@ -28,3 +28,6 @@ pids
 *.pid
 *.seed
 *.pid.lock
+
+# fly.io app config file
+fly.toml

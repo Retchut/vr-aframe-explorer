@@ -1,9 +1,6 @@
 /* global AFRAME, THREE */
 
-import {
-	varyNavmeshOpacity,
-	changeNavmeshOpacity,
-} from "../Navmesh/NavmeshMaterial";
+import { varyNavmeshOpacity } from "../Navmesh/NavmeshMaterial";
 
 AFRAME.registerComponent("button", {
 	schema: {

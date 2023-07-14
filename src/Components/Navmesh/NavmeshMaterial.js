@@ -7,14 +7,7 @@ function varyNavmeshOpacity(variation) {
 	const navmeshEl = document.getElementById("navmesh");
 	const originalOpacity = navmeshEl.getAttribute("navmesh-material").opacity;
 	const newOpacity = clamp(originalOpacity + variation, 0.0, 1.0);
-	changeNavmeshOpacity(newOpacity);
-}
-
-function changeNavmeshOpacity(newOpacity) {
-	const navmeshEl = document.getElementById("navmesh");
 	navmeshEl.setAttribute("navmesh-material", "opacity", newOpacity);
-	const newAttr = navmeshEl.getAttribute("navmesh-material");
-	setMaterialProps(navmeshEl, newAttr.color, newAttr.opacity);
 }
 
 AFRAME.registerComponent("navmesh-material", {
@@ -30,10 +23,16 @@ AFRAME.registerComponent("navmesh-material", {
 	},
 	init: function () {
 		// wait for model to load
-		this.el.addEventListener("model-loaded", () =>
-			setMaterialProps(this.el, this.data.color, this.data.opacity)
-		);
+		this.el.addEventListener("model-loaded", () => {
+			setMaterialProps(this.el, this.data.color, this.data.opacity);
+			this.loaded = true;
+		});
+	},
+	update: function () {
+		if (this.loaded) {
+			setMaterialProps(this.el, this.data.color, this.data.opacity);
+		}
 	},
 });
 
-export { varyNavmeshOpacity, changeNavmeshOpacity };
+export { varyNavmeshOpacity };

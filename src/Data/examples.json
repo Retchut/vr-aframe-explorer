@@ -2,5 +2,9 @@
 	{
 		"src": "/models/autumn_house/scene.gltf",
 		"nav_src": "/models/navmesh.glb"
+	},
+	{
+		"src": "/models/meeting_room/meeting_room.glb",
+		"nav_src": "/models/meeting_room/meeting_room_navmesh.glb"
 	}
 ]

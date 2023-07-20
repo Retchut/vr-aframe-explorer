@@ -16,6 +16,10 @@ AFRAME.registerComponent("mesh-text", {
 			type: "float",
 			default: 0.2,
 		},
+		text: {
+			type: "string",
+			default: "placeholder",
+		},
 	},
 	init: function () {
 		this.text = new ThreeMeshUI.Text({
@@ -26,7 +30,6 @@ AFRAME.registerComponent("mesh-text", {
 
 		const parentEl = this.el.parentEl;
 		if (parentEl === this.el.sceneEl) {
-			console.log("Scene->" + this.el.id);
 			this.el.object3D.add(this.text);
 		} else {
 			parentEl.addEventListener("loaded", () => {

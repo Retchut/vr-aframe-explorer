@@ -38,7 +38,7 @@ function ViewerTemplate(exampleNum) {
 			id="ui-parent"
 			position="-1 5 -5"
 			rotation="-20 0 0"
-			mesh-block="width: 5; height: 4.5; padding: 0.2; fontSize: 0.2; backgroundOpacity: 0.2"
+			mesh-block="width: 5; height: 4.5; padding: 0.2; backgroundOpacity: 0.2"
 	  	>
 			<!-- Title block -->
 			<a-entity

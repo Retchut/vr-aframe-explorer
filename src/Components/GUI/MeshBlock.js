@@ -29,24 +29,17 @@ AFRAME.registerComponent("mesh-block", {
 
 		const parentEl = this.el.parentEl;
 		if (parentEl === this.el.sceneEl) {
-			console.log("Scene->" + this.el.id);
 			this.el.object3D.add(this.container);
 		} else {
 			parentEl.addEventListener("loaded", () => {
-				parentEl.components["mesh-block"].addToContainer(
-					this.container,
-					this.el.id
-				);
+				parentEl.components["mesh-block"].addToContainer(this.container);
 			});
 		}
 	},
 	tick: function () {
 		ThreeMeshUI.update();
 	},
-	addToContainer: function (toAdd, id) {
-		console.log(this.el.id + "->" + id);
-		console.log(id);
-		console.log(this.container);
+	addToContainer: function (toAdd) {
 		this.container.add(toAdd);
 	},
 });

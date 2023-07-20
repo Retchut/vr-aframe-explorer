@@ -42,6 +42,18 @@ AFRAME.registerComponent("mesh-ui", {
 			type: "string",
 			default: "#FFF",
 		},
+		text: {
+			type: "string",
+			default: "placeholder",
+		},
+		text2: {
+			type: "string",
+			default: "placeholder",
+		},
+		text3: {
+			type: "string",
+			default: "placeholder",
+		},
 	},
 	init: function () {
 		const container = new ThreeMeshUI.Block({

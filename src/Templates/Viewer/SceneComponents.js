@@ -67,30 +67,52 @@ function Camera(hasPointer) {
 }
 
 function TestUI() {
+	// const html = `
+	//     <a-entity
+	//         button="name: opacity decrease; action:nav-opacity-decrease"
+	//         position="24.99 4.5 1"
+	//         rotation="-20 -90 0"
+	//         geometry="primitive: plane"
+	//         material="color: #F00"
+	//     ></a-entity>
+
+	//     <a-entity
+	//         button="name: opacity increase; action:nav-opacity-increase"
+	//         position="24.99 4.5 3"
+	//         rotation="-20 -90 0"
+	//         geometry="primitive: plane"
+	//         material="color: #00F"
+	//     ></a-entity>
+
+	//     <a-entity
+	//         mesh-ui="width: 5; height:4.5; padding: 0.2; fontSize: 0.2; text: Test UI; text2: decrease navmesh opacity; text3: increase navmesh opacity"
+	//         position="25 5 2"
+	//         rotation="-20 -90 0"
+	//     ></a-entity>
+	// `;
 	const html = `
         <a-entity
             button="name: opacity decrease; action:nav-opacity-decrease"
-            position="24.99 4.5 1"
-            rotation="-20 -90 0"
+            position="4 4.5 -4.9"
+            rotation="-20 0 0"
             geometry="primitive: plane"
             material="color: #F00"
         ></a-entity>
 
         <a-entity
             button="name: opacity increase; action:nav-opacity-increase"
-            position="24.99 4.5 3"
-            rotation="-20 -90 0"
+            position="6 4.5 -4.9"
+            rotation="-20 0 0"
             geometry="primitive: plane"
             material="color: #00F"
         ></a-entity>
 
         <a-entity
             mesh-ui="width: 5; height:4.5; padding: 0.2; fontSize: 0.2; text: Test UI; text2: decrease navmesh opacity; text3: increase navmesh opacity"
-            position="25 5 2"
-            rotation="-20 -90 0"
+            position="5 5 -5"
+            rotation="-20 0 0"
         ></a-entity>
-	`;
-
+    `;
 	return html;
 }
 

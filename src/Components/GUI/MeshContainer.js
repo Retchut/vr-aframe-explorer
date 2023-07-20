@@ -3,63 +3,22 @@
 import ThreeMeshUI from "three-mesh-ui";
 
 AFRAME.registerComponent("mesh-container", {
-	schema: {
-		width: { type: "float", default: 1 },
-		height: { type: "float", default: 1 },
-		margin: { type: "float", default: 0.0 },
-		padding: { type: "float", default: 0.0 },
-		backgroundOpacity: { type: "float", default: 0.7 },
-		fontFamily: { type: "string", default: "/fonts/Roboto/Roboto-msdf.json" },
-		fontTexture: { type: "string", default: "/fonts/Roboto/Roboto-msdf.png" },
-		justifyContent: { type: "string", default: "center" },
-		contentDirection: { type: "string", default: "column" },
-	},
 	init: function () {
-		this.container = new ThreeMeshUI.Block({
-			width: this.data.width,
-			height: this.data.height,
-			margin: this.data.margin,
-			padding: this.data.padding,
-			backgroundOpacity: this.data.backgroundOpacity,
-			fontFamily: this.data.fontFamily,
-			fontTexture: this.data.fontTexture,
-			justifyContent: this.data.justifyContent,
-			contentDirection: this.data.contentDirection,
-		});
-
 		this.registerContainer();
 	},
 	tick: function () {
 		ThreeMeshUI.update();
 	},
 	registerContainer: function () {
-		this.el.object3D.add(this.container);
-
-		const children = this.el.children;
-		for (const key in Object.keys(children)) {
-			const child = children[key];
-			const meshblock = child.components["mesh-block"];
-			const meshtext = child.components["mesh-text"];
-
-			// check for both mesh-block and mesh-text components
-			if (meshblock && meshtext) {
+		this.el.addEventListener("loaded", () => {
+			const meshblock = this.el.components["mesh-block"];
+			if (!meshblock) {
 				console.error(
-					"Entity inside a mesh-container component cannot have both a mesh-block component or a mesh-text component"
+					"A mesh-container component must be attached to an entity with a mesh-block component."
 				);
-				console.error(child);
-				continue;
+				return;
 			}
-			// check for neither mesh-block and mesh-text components
-			else if (!meshblock && !meshtext) {
-				console.error(
-					"Entity inside a mesh-container component must have either a mesh-block component or a mesh-text component"
-				);
-				console.error(child);
-				continue;
-			}
-
-			const uiComponent = meshblock ? meshblock : meshtext;
-			uiComponent.registerUIEl(this.container);
-		}
+			meshblock.registerUIEl(this.el.object3D);
+		});
 	},
 });

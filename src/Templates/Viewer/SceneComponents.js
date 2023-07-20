@@ -66,7 +66,7 @@ function Camera(hasPointer) {
 	return html;
 }
 
-function TestUI() {
+function NavmeshUI() {
 	const html = `
         <a-entity
             button="name: opacity decrease; action:nav-opacity-decrease"
@@ -87,7 +87,8 @@ function TestUI() {
 		<a-entity
 			position="25 5 2"
 	        rotation="-20 -90 0"
-			mesh-container="width: 5; height: 4.5; padding: 0.2; backgroundOpacity: 0.2; justifyContent: start"
+			mesh-container
+            mesh-block="width: 5; height: 4.5; padding: 0.2; backgroundOpacity: 0.2; justifyContent: start"
 	  	>
 			<!-- Title block -->
 			<a-entity
@@ -132,4 +133,4 @@ function TestUI() {
 	return html;
 }
 
-export { Assets, Models, Camera, TestUI };
+export { Assets, Models, Camera, NavmeshUI };

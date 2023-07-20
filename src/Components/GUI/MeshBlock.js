@@ -2,16 +2,6 @@
 
 import ThreeMeshUI from "three-mesh-ui";
 
-AFRAME.registerSystem("mesh-block", {
-	init: function () {
-		this.nodes = [];
-	},
-	addContainer(el) {
-		this.nodes.push(el.id);
-		console.log(this.nodes);
-	},
-});
-
 AFRAME.registerComponent("mesh-block", {
 	schema: {
 		width: { type: "float", default: 1 },
@@ -22,6 +12,7 @@ AFRAME.registerComponent("mesh-block", {
 		fontFamily: { type: "string", default: "/fonts/Roboto/Roboto-msdf.json" },
 		fontTexture: { type: "string", default: "/fonts/Roboto/Roboto-msdf.png" },
 		justifyContent: { type: "string", default: "center" },
+		textAlign: { type: "string", default: "center" },
 		contentDirection: { type: "string", default: "column" },
 	},
 	init: function () {
@@ -34,6 +25,7 @@ AFRAME.registerComponent("mesh-block", {
 			fontFamily: this.data.fontFamily,
 			fontTexture: this.data.fontTexture,
 			justifyContent: this.data.justifyContent,
+			textAlign: this.data.textAlign,
 			contentDirection: this.data.contentDirection,
 		});
 	},

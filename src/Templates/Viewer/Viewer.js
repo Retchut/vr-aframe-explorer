@@ -45,7 +45,7 @@ function ViewerTemplate(exampleNum) {
 				id="title-block"
 				mesh-block="width: 2; height: 0.5; margin: 0.025; justify-content: center;"
 			>
-				<a-entity id="title-text" mesh-text="text: Test UI"></a-entity>
+				<a-entity id="title-text" mesh-text="content: Test UI"></a-entity>
 			</a-entity>
 	
 			<!-- Right block -->

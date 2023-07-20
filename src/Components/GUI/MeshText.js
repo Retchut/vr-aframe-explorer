@@ -10,20 +10,16 @@ AFRAME.registerComponent("mesh-text", {
 		},
 		fontColor: {
 			type: "string",
-			default: "#000",
+			default: "#FFF",
 		},
 		fontSize: {
 			type: "float",
 			default: 0.2,
 		},
-		text: {
-			type: "string",
-			default: "placeholder",
-		},
 	},
 	init: function () {
 		this.text = new ThreeMeshUI.Text({
-			content: this.data.text3,
+			content: this.data.content,
 			fontColor: new THREE.Color(this.data.fontColor),
 			fontSize: this.data.fontSize,
 		});

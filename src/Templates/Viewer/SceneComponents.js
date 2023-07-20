@@ -113,7 +113,7 @@ function TestUI() {
             rotation="-20 0 0"
         ></a-entity>
     `;
-	return html;
+	// return html;
 }
 
 export { Assets, Models, Camera, TestUI };

@@ -23,17 +23,12 @@ AFRAME.registerComponent("mesh-text", {
 			fontColor: new THREE.Color(this.data.fontColor),
 			fontSize: this.data.fontSize,
 		});
-
-		const parentEl = this.el.parentEl;
-		if (parentEl === this.el.sceneEl) {
-			this.el.object3D.add(this.text);
-		} else {
-			parentEl.addEventListener("loaded", () => {
-				parentEl.components["mesh-block"].addToContainer(this.text, this.el.id);
-			});
-		}
 	},
 	tick: function () {
 		ThreeMeshUI.update();
+	},
+	registerUIEl: function (parentContainer) {
+		parentContainer.add(this.text);
+		console.log("registering: " + this.el.id);
 	},
 });

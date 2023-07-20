@@ -35,10 +35,10 @@ function ViewerTemplate(exampleNum) {
 		${TestUI()}
 
 		<a-entity
-			id="ui-parent"
+			id="A"
 			position="-1 5 -5"
 			rotation="-20 0 0"
-			mesh-block="width: 5; height: 4.5; padding: 0.2; backgroundOpacity: 0.2"
+			mesh-container="width: 5; height: 4.5; padding: 0.2; backgroundOpacity: 0.2"
 	  	>
 			<!-- Title block -->
 			<a-entity
@@ -47,19 +47,31 @@ function ViewerTemplate(exampleNum) {
 			>
 				<a-entity id="title-text" mesh-text="content: Test UI"></a-entity>
 			</a-entity>
-	
+  
+			<!-- Left block -->
+			<a-entity
+				id="left-block"
+				mesh-block="width: 1.5; height: 1; margin: 0.025; padding: 0.025; justify-content: center"
+			>
+				<a-entity
+					id="left-text-block"
+					mesh-block="width: 1; height: 1.5; text-align: center; justify-content: center;"
+				>
+					<a-entity id="left-text" mesh-text="content: decrease navmesh opacity;"> </a-entity>
+				</a-entity>
+			</a-entity>
+  
 			<!-- Right block -->
 			<a-entity
 				id="right-block"
 				mesh-block="width: 1.5; height: 1; margin: 0.025; padding: 0.025; justify-content: center"
 			>
-			</a-entity>
-	
-			<!-- Left block -->
-			<a-entity
-				id="left-block"
-				mesh-block="width: 3.5; height: 1; margin: 0.025; padding: 0.025; justify-content: center"
-			>
+				<a-entity
+					id="right-text-block"
+					mesh-block="width: 1; height: 1.5; margin: 0.02; padding: 0.02; text-align: center; justify-content: center;"
+				>
+					<a-entity id="right-text" mesh-text="content: increase navmesh opacity;"> </a-entity>
+				</a-entity>
 			</a-entity>
 		</a-entity>
 

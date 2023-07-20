@@ -2,17 +2,7 @@
 
 import ThreeMeshUI from "three-mesh-ui";
 
-AFRAME.registerSystem("mesh-block", {
-	init: function () {
-		this.nodes = [];
-	},
-	addContainer(el) {
-		this.nodes.push(el.id);
-		console.log(this.nodes);
-	},
-});
-
-AFRAME.registerComponent("mesh-block", {
+AFRAME.registerComponent("mesh-container", {
 	schema: {
 		width: { type: "float", default: 1 },
 		height: { type: "float", default: 1 },
@@ -36,16 +26,16 @@ AFRAME.registerComponent("mesh-block", {
 			justifyContent: this.data.justifyContent,
 			contentDirection: this.data.contentDirection,
 		});
+
+		this.registerContainer();
 	},
 	tick: function () {
 		ThreeMeshUI.update();
 	},
-	registerUIEl: function (parentContainer) {
-		parentContainer.add(this.container);
+	registerContainer: function () {
+		this.el.object3D.add(this.container);
 		console.log("registering: " + this.el.id);
-		this.registerChildren(parentContainer);
-	},
-	registerChildren: function () {
+
 		const children = this.el.children;
 		for (const key in Object.keys(children)) {
 			const child = children[key];

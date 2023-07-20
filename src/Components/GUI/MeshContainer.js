@@ -34,7 +34,6 @@ AFRAME.registerComponent("mesh-container", {
 	},
 	registerContainer: function () {
 		this.el.object3D.add(this.container);
-		console.log("registering: " + this.el.id);
 
 		const children = this.el.children;
 		for (const key in Object.keys(children)) {

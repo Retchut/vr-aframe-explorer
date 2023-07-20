@@ -34,7 +34,6 @@ AFRAME.registerComponent("mesh-block", {
 	},
 	registerUIEl: function (parentContainer) {
 		parentContainer.add(this.container);
-		console.log("registering: " + this.el.id);
 		this.registerChildren(parentContainer);
 	},
 	registerChildren: function () {

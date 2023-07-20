@@ -29,6 +29,5 @@ AFRAME.registerComponent("mesh-text", {
 	},
 	registerUIEl: function (parentContainer) {
 		parentContainer.add(this.text);
-		console.log("registering: " + this.el.id);
 	},
 });

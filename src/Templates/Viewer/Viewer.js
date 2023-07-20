@@ -1,4 +1,4 @@
-import { Assets, Models, Camera, TestUI } from "./SceneComponents";
+import { Assets, Models, Camera, NavmeshUI } from "./SceneComponents";
 import examples from "../../Data/examples.json";
 
 import MissingExample from "../Error/MissingExample";
@@ -32,7 +32,7 @@ function ViewerTemplate(exampleNum) {
 		${Models()}
 
 		<!-- Simple test UI -->
-		${TestUI()}
+		${NavmeshUI()}
 
 		<!-- Debug -->
 		<!-- <a-entity camera-debug></a-entity> -->

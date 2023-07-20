@@ -66,12 +66,12 @@ function Camera(hasPointer) {
 	return html;
 }
 
-function TestUI() {
+function NavmeshUI() {
 	const html = `
         <a-entity
             button="name: opacity decrease; action:nav-opacity-decrease"
             position="24.99 4.5 1"
-            rotation="-20 -90 0"
+	        rotation="-20 -90 0"
             geometry="primitive: plane"
             material="color: #F00"
         ></a-entity>
@@ -79,19 +79,58 @@ function TestUI() {
         <a-entity
             button="name: opacity increase; action:nav-opacity-increase"
             position="24.99 4.5 3"
-            rotation="-20 -90 0"
+	        rotation="-20 -90 0"
             geometry="primitive: plane"
             material="color: #00F"
         ></a-entity>
 
-        <a-entity
-            mesh-ui="width: 5; height:4.5; padding: 0.2; fontSize: 0.2; text: Test UI; text2: decrease navmesh opacity; text3: increase navmesh opacity"
-            position="25 5 2"
-            rotation="-20 -90 0"
-        ></a-entity>
-	`;
+		<a-entity
+			position="25 5 2"
+	        rotation="-20 -90 0"
+			mesh-container
+            mesh-block="width: 5; height: 4.5; padding: 0.2; backgroundOpacity: 0.2; justifyContent: start"
+	  	>
+			<!-- Title block -->
+			<a-entity
+				mesh-block="width: 2; height: 0.5; margin: 0.025; justifyContent: center;"
+			>
+				<a-entity mesh-text="content: Test UI"></a-entity>
+			</a-entity>
+
+			<!-- Content block -->
+			<a-entity
+				mesh-block="width: 0.5 height: 1; margin: 0.3; padding: 0.025; justifyContent: center; backgroundOpacity: 0"
+			>
+				<a-entity
+					mesh-block="contentDirection: row; padding: 0.2; margin: 0.025; backgroundOpacity: 0"
+				>
+					<!-- Left block -->
+					<a-entity
+						mesh-block="width: 1.5; height: 1; margin: 0.3; padding: 0.025; justifyContent: center"
+					>
+						<a-entity
+							mesh-block="width: 1.5; height: 1; textAlign: center; justifyContent: center;"
+						>
+							<a-entity mesh-text="content: decrease navmesh opacity;"> </a-entity>
+						</a-entity>
+					</a-entity>
+		
+					<!-- Right block -->
+					<a-entity
+						mesh-block="width: 1.5; height: 1; margin: 0.3; padding: 0.025; justifyContent: center"
+					>
+						<a-entity
+							mesh-block="width: 1.5; height: 1; margin: 0.05; padding: 0.02; textAlign: center; justifyContent: center;"
+						>
+							<a-entity mesh-text="content: increase navmesh opacity;"> </a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+		</a-entity>
+    `;
 
 	return html;
 }
 
-export { Assets, Models, Camera, TestUI };
+export { Assets, Models, Camera, NavmeshUI };

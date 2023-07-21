@@ -1,7 +1,7 @@
 [
 	{
 		"src": "/models/autumn_house/scene.gltf",
-		"nav_src": "/models/navmesh.glb",
+		"nav_src": "/models/autumn_house/navmesh.glb",
 		"scale" : 1,
 		"spawnpoint" : {"x":0, "y":4, "z":0},
 		"cam_height" : 4,

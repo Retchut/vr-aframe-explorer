@@ -13,6 +13,6 @@
 		"scale" : 3,
 		"spawnpoint" : {"x":-2, "y":4, "z":10},
 		"cam_height": 4,
-		"cam_acceleration": 10
+		"cam_acceleration": 30
 	}
 ]

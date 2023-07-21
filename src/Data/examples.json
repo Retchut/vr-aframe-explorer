@@ -14,5 +14,13 @@
 		"spawnpoint" : {"x":-2, "y":4, "z":10},
 		"cam_height": 4,
 		"cam_acceleration": 30
+	},
+	{
+		"src": "/models/hall/hall.glb",
+		"nav_src": "/models/hall/hall_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":-4, "y":0, "z":9},
+		"cam_height": 4,
+		"cam_acceleration": 30
 	}
 ]

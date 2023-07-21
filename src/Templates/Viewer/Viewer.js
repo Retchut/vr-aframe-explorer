@@ -11,6 +11,9 @@ function ViewerTemplate(exampleNum) {
 		return { head, html };
 	}
 
+	const { src, nav_src, scale, cam_height, spawnpoint, cam_acceleration } =
+		examples[exampleNum];
+
 	const head = `
 		<!-- <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> -->
 		<script src="https://aframe.io/releases/1.4.0/aframe.js"></script>
@@ -20,16 +23,16 @@ function ViewerTemplate(exampleNum) {
 	<a-scene>
 		<!-- Assets -->
 		<a-assets>
-		${Assets(examples[exampleNum])}
+		${Assets(src, nav_src)}
 		</a-assets>
 
 		<a-sky color="#88c6eb"></a-sky>
 
 		<!-- Scene Camera (and optional pointer) -->
-		${Camera(true)}
+		${Camera(spawnpoint, cam_height, cam_acceleration, true)}
 
 		<!-- Scene models (loaded in assets) -->
-		${Models()}
+		${Models(scale)}
 
 		<!-- Simple test UI -->
 		${NavmeshUI()}

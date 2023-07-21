@@ -2,26 +2,27 @@ const MODEL_ID = "model";
 const NAVMESH_MODEL_ID = "navmesh-model";
 const NAVMESH_EL_ID = "navmesh";
 
-function Assets(example) {
+function Assets(src, nav_src) {
 	let html = `
             <a-asset-item
                 id=${MODEL_ID}
-                src=${example.src}
+                src=${src}
             ></a-asset-item>
             <a-asset-item
                 id=${NAVMESH_MODEL_ID}
-                src=${example.nav_src}
+                src=${nav_src}
             ></a-asset-item>
 		`;
 
 	return html;
 }
 
-function Models() {
+function Models(scale) {
 	const html = `
         <a-entity
             position="0 0 0"
             rotation="0 0 0"
+			scale="${scale} ${scale} ${scale}"
             gltf-model="#${MODEL_ID}"
         ></a-entity>
         <a-entity
@@ -29,6 +30,7 @@ function Models() {
             navmesh-material
             position="0 0 0"
             rotation="0 0 0"
+			scale="${scale} ${scale} ${scale}"
             gltf-model="#${NAVMESH_MODEL_ID}"
         ></a-entity>
 	`;
@@ -36,16 +38,16 @@ function Models() {
 	return html;
 }
 
-function Camera(hasPointer) {
+function Camera(spawnpoint, cam_height, cam_acceleration, hasPointer) {
 	const html = `
         <a-entity
             id="camera"
             camera
             movement-controls="fly: true;"
             look-controls
-            wasd-controls="acceleration:100"
-            position="0 4 0"
-            navmesh-constraint="navmeshID: #navmesh; height: 4"
+            wasd-controls="acceleration:${cam_acceleration}"
+            position="${spawnpoint.x} ${spawnpoint.y} ${spawnpoint.z}"
+            navmesh-constraint="navmeshID: #navmesh; height: ${cam_height}"
         >
 			${
 				hasPointer

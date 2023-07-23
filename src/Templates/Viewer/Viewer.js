@@ -1,18 +1,8 @@
 import { Assets, Models, Camera, NavmeshUI } from "./SceneComponents";
-import examples from "../../Data/examples.json";
 
-import MissingExample from "../Error/MissingExample";
-
-function ViewerTemplate(exampleNum) {
-	// check if example exists
-	if (exampleNum === -1 || exampleNum >= examples.length) {
-		const head = "";
-		const html = MissingExample();
-		return { head, html };
-	}
-
+function ViewerTemplate(viewerParams) {
 	const { src, nav_src, scale, cam_height, spawnpoint, cam_acceleration } =
-		examples[exampleNum];
+		viewerParams;
 
 	const head = `
 		<!-- <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> -->

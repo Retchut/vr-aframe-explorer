@@ -15,7 +15,6 @@ export function render(url, manifest) {
 			const exampleID = parseExample(path);
 			return ViewerTemplate(exampleID);
 		default:
-			const html = Error404();
-			return { html };
+			return Error404();
 	}
 }

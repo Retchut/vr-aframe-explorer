@@ -10,11 +10,7 @@ const parseExample = (exampleID) => {
 };
 
 const exampleExists = (exampleID) => {
-	console.log("%d|%d", exampleID, examples.length);
-	const bool1 = exampleID === -1;
-	const bool2 = exampleID >= examples.length;
-	console.log("%d|%d", bool1, bool2);
-	return exampleID !== -1 || exampleID < examples.length;
+	return exampleID !== -1 && exampleID < examples.length;
 };
 
 export function render(url, manifest, query) {

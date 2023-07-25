@@ -27,7 +27,7 @@ function HomeTemplate() {
 		<br/>
 		<a href="/example/7">Auditorium (natural light, decimated to 1%)</a>
 		<br/>
-		<h2>Or upload a model and choose your parameters (to be implemented, but try using ""):</h2>
+		<h2>Or upload a model and choose your parameters (to be implemented, but try using "test.glb" and "test_navmesh.glb" along with any other parameters of your choice):</h2>
 		<form method="GET" action="/viewer">
 			<label for="model_src">model_src:</label>
 			<input type="text" id="model_src" name="model_src">

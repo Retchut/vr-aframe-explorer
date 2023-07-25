@@ -28,7 +28,7 @@ function Models(scale) {
         <a-entity
             id="${NAVMESH_EL_ID}"
             navmesh-material
-            position="0 0 0"
+            position="0.1 0.1 0.1"
             rotation="0 0 0"
 			scale="${scale} ${scale} ${scale}"
             gltf-model="#${NAVMESH_MODEL_ID}"

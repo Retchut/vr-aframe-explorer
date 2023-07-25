@@ -31,3 +31,8 @@ pids
 
 # fly.io app config file
 fly.toml
+
+# very large models
+public/models/auditorium/auditorium_natural_light_metashape.glb
+public/models/auditorium/auditorium_natural_light_metashape_0_2_decimated.glb
+public/models/auditorium/auditorium_natural_light_metashape_0_4_decimated.glb

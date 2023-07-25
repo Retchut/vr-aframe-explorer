@@ -11,7 +11,23 @@ function HomeTemplate() {
 		<br/>
 		<br/>
 		<a href="/example/2">Hall</a>
-		<h2>Or upload a model and choose your parameters:</h2>
+		<br/>
+		<br/>
+		<a href="/example/3">Auditorium (natural light, no decimation)</a>
+		<br/>
+		<br/>
+		<a href="/example/4">Auditorium (natural light, decimated to 40%)</a>
+		<br/>
+		<br/>
+		<a href="/example/5">Auditorium (natural light, decimated to 20%)</a>
+		<br/>
+		<br/>
+		<a href="/example/6">Auditorium (natural light, decimated to 10%)</a>
+		<br/>
+		<br/>
+		<a href="/example/7">Auditorium (natural light, decimated to 1%)</a>
+		<br/>
+		<h2>Or upload a model and choose your parameters (to be implemented, but try using ""):</h2>
 		<form method="GET" action="/viewer">
 			<label for="model_src">model_src:</label>
 			<input type="text" id="model_src" name="model_src">

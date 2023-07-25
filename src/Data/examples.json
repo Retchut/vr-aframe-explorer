@@ -22,5 +22,45 @@
 		"spawnpoint" : {"x":-4, "y":4, "z":9},
 		"cam_height": 4,
 		"cam_acceleration": 30
+	},
+	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60
+	},
+	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape_0_4_decimated.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60
+	},
+	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape_0_2_decimated.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60
+	},
+	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape_0_1_decimated.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60
+	},
+	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape_0_01_decimated.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60
 	}
 ]

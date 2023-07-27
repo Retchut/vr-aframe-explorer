@@ -70,5 +70,14 @@
 		"cam_height": 7,
 		"cam_acceleration": 60,
 		"panel_position": {"x": -2, "y": 3, "z": -1}
+	},
+	{
+		"src": "/models/auditorium_lidar/auditorium_lidar.glb",
+		"nav_src": "/models/auditorium_lidar/auditorium_lidar_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60,
+		"panel_position": {"x": 5, "y": 3, "z": 5}
 	}
 ]

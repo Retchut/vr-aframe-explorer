@@ -32,28 +32,31 @@ function HomeTemplate() {
 		-->
 		<form method="GET" action="/viewer">
 		<input type="radio" id="model_0" name="example" value="0" >
-			<label for="model_0">House</label>
+			<label for="model_0">House (Smaller)</label>
 			<br>
 			<input type="radio" id="model_1" name="example" value="1" >
-			<label for="model_1">Meeting Room (LIDAR)</label>
+			<label for="model_1">Meeting Room (LIDAR) (Smaller)</label>
 			<br>
 			<input type="radio" id="model_2" name="example" value="2" >
-			<label for="model_2">Hall (LIDAR)</label>
+			<label for="model_2">Hall (LIDAR) (Smaller)</label>
 			<br>
-			<input type="radio" id="model_3" name="example" value="3" >
-			<label for="model_3">Auditorium (natural light, no decimation)</label>
-			<br>
-			<input type="radio" id="model_4" name="example" value="4" >
-			<label for="model_4">Auditorium (natural light, decimated to 40%)</label>
-			<br>
-			<input type="radio" id="model_5" name="example" value="5" >
-			<label for="model_5">Auditorium (natural light, decimated to 20%)</label>
-			<br>
-			<input type="radio" id="model_6" name="example" value="6" >
-			<label for="model_6">Auditorium (natural light, decimated to 10%)</label>
+			<input type="radio" id="model_8" name="example" value="8" >
+			<label for="model_8">Auditorium (LIDAR) (Smaller)</label>
 			<br>
 			<input type="radio" id="model_7" name="example" value="7" >
-			<label for="model_7">Auditorium (natural light, decimated to 1%)</label>
+			<label for="model_7">Auditorium (natural light, decimated to 1%) (Smaller)</label>
+			<br>
+			<input type="radio" id="model_6" name="example" value="6" >
+			<label for="model_6">Auditorium (natural light, decimated to 10%) (Medium)</label>
+			<br>
+			<input type="radio" id="model_5" name="example" value="5" >
+			<label for="model_5">Auditorium (natural light, decimated to 20%) (Larger)</label>
+			<br>
+			<input type="radio" id="model_4" name="example" value="4" >
+			<label for="model_4">Auditorium (natural light, decimated to 40%) (Larger)</label>
+			<br>
+			<input type="radio" id="model_3" name="example" value="3" >
+			<label for="model_3">Auditorium (natural light, no decimation) (Largest)</label>
 			<br>
 			<!--
 			<label for="model_src">model_src:</label>

@@ -4,6 +4,7 @@ function HomeTemplate() {
 	const html = `
 		<h1>Welcome</h1>
 		<h2>See the examples:</h2>
+		<!--
 		<a href="/example/0">Test House</a>
 		<br/>
 		<br/>
@@ -28,21 +29,48 @@ function HomeTemplate() {
 		<a href="/example/7">Auditorium (natural light, decimated to 1%)</a>
 		<br/>
 		<h2>Or upload a model and choose your parameters (to be implemented, but try using "test.glb" and "test_navmesh.glb" along with any other parameters of your choice):</h2>
+		-->
 		<form method="GET" action="/viewer">
+		<input type="radio" id="model_0" name="example" value="0" >
+			<label for="model_0">House</label>
+			<br>
+			<input type="radio" id="model_1" name="example" value="1" >
+			<label for="model_1">Meeting Room (LIDAR)</label>
+			<br>
+			<input type="radio" id="model_2" name="example" value="2" >
+			<label for="model_2">Hall (LIDAR)</label>
+			<br>
+			<input type="radio" id="model_3" name="example" value="3" >
+			<label for="model_3">Auditorium (natural light, no decimation)</label>
+			<br>
+			<input type="radio" id="model_4" name="example" value="4" >
+			<label for="model_4">Auditorium (natural light, decimated to 40%)</label>
+			<br>
+			<input type="radio" id="model_5" name="example" value="5" >
+			<label for="model_5">Auditorium (natural light, decimated to 20%)</label>
+			<br>
+			<input type="radio" id="model_6" name="example" value="6" >
+			<label for="model_6">Auditorium (natural light, decimated to 10%)</label>
+			<br>
+			<input type="radio" id="model_7" name="example" value="7" >
+			<label for="model_7">Auditorium (natural light, decimated to 1%)</label>
+			<br>
+			<!--
 			<label for="model_src">model_src:</label>
 			<input type="text" id="model_src" name="model_src">
 			<br>
 			<label for="nav_src">navmesh_src:</label>
 			<input type="text" id="nav_src" name="nav_src">
+			-->
 			<br>
 			<label for="scale">Model Scale:</label>
-			<input type="text" id="scale" name="scale">
+			<input type="range" min="1" max="5" id="scale" name="scale">
 			<br>
 			<label for="cam_height">Camera Height:</label>
-			<input type="text" id="cam_height" name="cam_height">
+			<input type="range" min="1" max="20" id="cam_height" name="cam_height">
 			<br>
 			<label for="cam_acceleration">Camera Acceleration:</label>
-			<input type="text" id="cam_acceleration" name="cam_acceleration">
+			<input type="range" min="1" max="200" id="cam_acceleration" name="cam_acceleration">
 			<br>
 			<h4>Spawnpoint:</h4>
 			<label for="spawnpoint_x">x:</label>

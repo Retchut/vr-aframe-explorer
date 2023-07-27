@@ -68,11 +68,13 @@ function Camera(spawnpoint, cam_height, cam_acceleration, hasPointer) {
 	return html;
 }
 
-function NavmeshUI() {
+function NavmeshUI(panel_position, scale) {
 	const html = `
         <a-entity
             button="name: opacity decrease; action:nav-opacity-decrease"
-            position="24.99 4.5 1"
+			position="${panel_position.x - 0.01} ${panel_position.y - 0.5} ${
+		panel_position.z - 1
+	}"
 	        rotation="-20 -90 0"
             geometry="primitive: plane"
             material="color: #F00"
@@ -80,14 +82,16 @@ function NavmeshUI() {
 
         <a-entity
             button="name: opacity increase; action:nav-opacity-increase"
-            position="24.99 4.5 3"
+			position="${panel_position.x - 0.01} ${panel_position.y - 0.5} ${
+		panel_position.z + 1
+	}"
 	        rotation="-20 -90 0"
             geometry="primitive: plane"
             material="color: #00F"
         ></a-entity>
 
 		<a-entity
-			position="25 5 2"
+			position="${panel_position.x} ${panel_position.y} ${panel_position.z}"
 	        rotation="-20 -90 0"
 			mesh-container
             mesh-block="width: 5; height: 4.5; padding: 0.2; backgroundOpacity: 0.2; justifyContent: start"

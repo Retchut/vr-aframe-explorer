@@ -52,6 +52,7 @@ const parseQueryParams = (query) => {
 		z: query["spawnpoint_z"] ?? 0,
 	};
 	const cam_acceleration = query["cam_acceleration"] ?? 50;
+	const panel_position = examples[query["example"]].panel_position;
 
 	return {
 		src: model_src,
@@ -60,6 +61,7 @@ const parseQueryParams = (query) => {
 		cam_height: cam_height,
 		spawnpoint: spawnpoint,
 		cam_acceleration: cam_acceleration,
+		panel_position: panel_position,
 	};
 };
 

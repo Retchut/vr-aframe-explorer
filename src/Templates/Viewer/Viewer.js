@@ -1,8 +1,15 @@
 import { Assets, Models, Camera, NavmeshUI } from "./SceneComponents";
 
 function ViewerTemplate(viewerParams) {
-	const { src, nav_src, scale, cam_height, spawnpoint, cam_acceleration } =
-		viewerParams;
+	const {
+		src,
+		nav_src,
+		scale,
+		cam_height,
+		spawnpoint,
+		cam_acceleration,
+		panel_position,
+	} = viewerParams;
 
 	const head = `
 		<!-- <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> -->
@@ -25,7 +32,7 @@ function ViewerTemplate(viewerParams) {
 		${Models(scale)}
 
 		<!-- Simple test UI -->
-		${NavmeshUI()}
+		${NavmeshUI(panel_position, scale)}
 
 		<!-- Debug -->
 		<!-- <a-entity camera-debug></a-entity> -->

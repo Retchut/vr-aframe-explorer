@@ -14,6 +14,7 @@ function ViewerTemplate(viewerParams) {
 	const head = `
 		<!-- <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> -->
 		<script src="https://aframe.io/releases/1.4.0/aframe.js"></script>
+		<script type="module" src="/src/entry-client-viewer.js"></script>
 	`;
 
 	const html = `

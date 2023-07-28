@@ -1,5 +1,5 @@
 function HomeTemplate() {
-	const head = ``;
+	const head = `<script type="module" src="/src/entry-client-home.js"></script>`;
 
 	const html = `
 		<h1>Welcome</h1>

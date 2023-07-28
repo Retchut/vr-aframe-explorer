@@ -60,33 +60,51 @@ function HomeTemplate() {
 			<input type="radio" id="model_8" name="example" value="8" >
 			<label for="model_8">Auditorium (natural light, no decimation) (Largest)</label>
 			<br>
-			<!--
-			<label for="model_src">model_src:</label>
-			<input type="text" id="model_src" name="model_src">
-			<br>
-			<label for="nav_src">navmesh_src:</label>
-			<input type="text" id="nav_src" name="nav_src">
-			-->
-			<br>
-			<label for="scale">Model Scale:</label>
-			<input type="range" min="1" max="5" id="scale" name="scale">
-			<br>
-			<label for="cam_height">Camera Height:</label>
-			<input type="range" min="1" max="20" id="cam_height" name="cam_height">
-			<br>
-			<label for="cam_acceleration">Camera Acceleration:</label>
-			<input type="range" min="1" max="200" id="cam_acceleration" name="cam_acceleration">
-			<br>
-			<h4>Spawnpoint:</h4>
+			<div class="slider-select">
+				<label for="scale">Model Scale:</label>
+				<input type="range" value="1" min="1" max="5" id="scale" name="scale">
+				<input type="number" value="1" min="1" max="5" id="scale_text">
+			</div>
+			<div class="slider-select">
+				<label for="cam_height">Camera Height:</label>
+				<input type="range" value="4" min="1" max="20" id="cam_height" name="cam_height">
+				<input type="number" value="4" min="1" max="20" id="cam_height_text">
+			</div>
+			<div class="slider-select">
+				<label for="cam_acceleration">Camera Acceleration:</label>
+				<input type="range" value="100" min="1" max="200" id="cam_acceleration" name="cam_acceleration">
+				<input type="number" value="100" min="1" max="200" id="cam_acceleration_text">
+			</div>
+			<h4>Camera spawnpoint:</h4>
 			<label for="spawnpoint_x">x:</label>
-			<input type="text" id="spawnpoint_x" name="spawnpoint_x">
+			<input type="number" value="0" id="spawnpoint_x" name="spawnpoint_x">
 			<label for="spawnpoint_y">y:</label>
-			<input type="text" id="spawnpoint_y" name="spawnpoint_y">
+			<input type="number" value="0" id="spawnpoint_y" name="spawnpoint_y">
 			<label for="spawnpoint_z">z:</label>
-			<input type="text" id="spawnpoint_z" name="spawnpoint_z">
+			<input type="number" value="0" id="spawnpoint_z" name="spawnpoint_z">
 			<br>
 			<input type="submit" value="Submit"/>
 		</form>
+		<style>
+			h2, h4 {
+				margin: 0.5rem 0;
+			}
+			input[type=number]{
+				text-align: center;
+				max-width: 50px;
+			}
+			input[type=radio] {
+				margin: 0.1rem auto;
+			}
+			input[type=submit] {
+				margin: 0.5rem;
+			}
+			.slider-select {
+				display:flex;
+				align-items: center;
+				padding-top: 0.5rem;
+			}
+		</style>
 	`;
 
 	return { head, html };

@@ -13,32 +13,6 @@ const exampleExists = (exampleID) => {
 	return exampleID !== -1 && exampleID < examples.length;
 };
 
-// const parseQueryParams = (query) => {
-// 	const model_src = query["model_src"]
-// 		? `/models/uploaded/${query["model_src"]}`
-// 		: "";
-// 	const nav_src = query["nav_src"]
-// 		? `/models/uploaded/${query["nav_src"]}`
-// 		: "";
-// 	const scale = query["scale"] ?? 1;
-// 	const cam_height = query["cam_height"] ?? 3;
-// 	const spawnpoint = {
-// 		x: query["spawnpoint_x"] ?? 0,
-// 		y: query["spawnpoint_y"] ?? 0,
-// 		z: query["spawnpoint_z"] ?? 0,
-// 	};
-// 	const cam_acceleration = query["cam_acceleration"] ?? 50;
-
-// 	return {
-// 		src: model_src,
-// 		nav_src: nav_src,
-// 		scale: scale,
-// 		cam_height: cam_height,
-// 		spawnpoint: spawnpoint,
-// 		cam_acceleration: cam_acceleration,
-// 	};
-// };
-
 const parseQueryParams = (query) => {
 	const model_src = query["example"] ? `${examples[query["example"]].src}` : "";
 	const nav_src = query["example"]

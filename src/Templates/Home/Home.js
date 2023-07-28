@@ -3,33 +3,35 @@ function HomeTemplate() {
 
 	const html = `
 		<h1>Welcome</h1>
-		<h2>See the examples:</h2>
-		<!--
-		<a href="/example/0">Test House</a>
+		<h2>Choose a prebuilt example:</h2>
+		<a href="/example/0">House (Smaller)</a>
 		<br/>
 		<br/>
-		<a href="/example/1">Meeting Room</a>
+		<a href="/example/1">Meeting Room (LIDAR) (Smaller)</a>
 		<br/>
 		<br/>
-		<a href="/example/2">Hall</a>
+		<a href="/example/2">Hall (LIDAR) (Smaller)</a>
 		<br/>
 		<br/>
-		<a href="/example/3">Auditorium (natural light, no decimation)</a>
+		<a href="/example/3">Auditorium (LIDAR) (Smaller)</a>
 		<br/>
 		<br/>
-		<a href="/example/4">Auditorium (natural light, decimated to 40%)</a>
+		<a href="/example/4">Auditorium (natural light, decimated to 1%) (Smaller)</a>
 		<br/>
 		<br/>
-		<a href="/example/5">Auditorium (natural light, decimated to 20%)</a>
+		<a href="/example/5">Auditorium (natural light, decimated to 10%) (Medium)</a>
 		<br/>
 		<br/>
-		<a href="/example/6">Auditorium (natural light, decimated to 10%)</a>
+		<a href="/example/6">Auditorium (natural light, decimated to 20%) (Larger)</a>
 		<br/>
 		<br/>
-		<a href="/example/7">Auditorium (natural light, decimated to 1%)</a>
+		<a href="/example/7">Auditorium (natural light, decimated to 40%) (Larger)</a>
 		<br/>
-		<h2>Or upload a model and choose your parameters (to be implemented, but try using "test.glb" and "test_navmesh.glb" along with any other parameters of your choice):</h2>
-		-->
+		<br />
+		<a href="/example/8">Auditorium (natural light, no decimation) (Largest)</a>
+		<br />
+		<br />
+		<h2>Or customize some scene parameters:</h2>
 		<form method="GET" action="/viewer">
 		<input type="radio" id="model_0" name="example" value="0" >
 			<label for="model_0">House (Smaller)</label>
@@ -40,23 +42,23 @@ function HomeTemplate() {
 			<input type="radio" id="model_2" name="example" value="2" >
 			<label for="model_2">Hall (LIDAR) (Smaller)</label>
 			<br>
-			<input type="radio" id="model_8" name="example" value="8" >
-			<label for="model_8">Auditorium (LIDAR) (Smaller)</label>
-			<br>
-			<input type="radio" id="model_7" name="example" value="7" >
-			<label for="model_7">Auditorium (natural light, decimated to 1%) (Smaller)</label>
-			<br>
-			<input type="radio" id="model_6" name="example" value="6" >
-			<label for="model_6">Auditorium (natural light, decimated to 10%) (Medium)</label>
-			<br>
-			<input type="radio" id="model_5" name="example" value="5" >
-			<label for="model_5">Auditorium (natural light, decimated to 20%) (Larger)</label>
+			<input type="radio" id="model_3" name="example" value="3" >
+			<label for="model_3">Auditorium (LIDAR) (Smaller)</label>
 			<br>
 			<input type="radio" id="model_4" name="example" value="4" >
-			<label for="model_4">Auditorium (natural light, decimated to 40%) (Larger)</label>
+			<label for="model_4">Auditorium (natural light, decimated to 1%) (Smaller)</label>
 			<br>
-			<input type="radio" id="model_3" name="example" value="3" >
-			<label for="model_3">Auditorium (natural light, no decimation) (Largest)</label>
+			<input type="radio" id="model_5" name="example" value="5" >
+			<label for="model_5">Auditorium (natural light, decimated to 10%) (Medium)</label>
+			<br>
+			<input type="radio" id="model_6" name="example" value="6" >
+			<label for="model_6">Auditorium (natural light, decimated to 20%) (Larger)</label>
+			<br>
+			<input type="radio" id="model_7" name="example" value="7" >
+			<label for="model_7">Auditorium (natural light, decimated to 40%) (Larger)</label>
+			<br>
+			<input type="radio" id="model_8" name="example" value="8" >
+			<label for="model_8">Auditorium (natural light, no decimation) (Largest)</label>
 			<br>
 			<!--
 			<label for="model_src">model_src:</label>

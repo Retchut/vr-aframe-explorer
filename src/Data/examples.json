@@ -24,43 +24,16 @@
 		"spawnpoint" : {"x":-4, "y":4, "z":9},
 		"cam_height": 4,
 		"cam_acceleration": 30,
-		"panel_position": {"x": -15, "y": 5, "z": 5}
+		"panel_position": {"x": 13, "y": 4, "z": 2}
 	},
 	{
-		"src": "/models/auditorium/auditorium_natural_light_metashape.glb",
-		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"src": "/models/auditorium_lidar/auditorium_lidar.glb",
+		"nav_src": "/models/auditorium_lidar/auditorium_lidar_navmesh.glb",
 		"scale" : 3,
-		"spawnpoint" : {"x":0, "y":7, "z":0},
-		"cam_height": 7,
+		"spawnpoint" : {"x":0, "y":3, "z":0},
+		"cam_height": 3,
 		"cam_acceleration": 60,
-		"panel_position": {"x": -2, "y": 3, "z": -1}
-	},
-	{
-		"src": "/models/auditorium/auditorium_natural_light_metashape_0_4_decimated.glb",
-		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
-		"scale" : 3,
-		"spawnpoint" : {"x":0, "y":7, "z":0},
-		"cam_height": 7,
-		"cam_acceleration": 60,
-		"panel_position": {"x": -2, "y": 3, "z": -1}
-	},
-	{
-		"src": "/models/auditorium/auditorium_natural_light_metashape_0_2_decimated.glb",
-		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
-		"scale" : 3,
-		"spawnpoint" : {"x":0, "y":7, "z":0},
-		"cam_height": 7,
-		"cam_acceleration": 60,
-		"panel_position": {"x": -2, "y": 3, "z": -1}
-	},
-	{
-		"src": "/models/auditorium/auditorium_natural_light_metashape_0_1_decimated.glb",
-		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
-		"scale" : 3,
-		"spawnpoint" : {"x":0, "y":7, "z":0},
-		"cam_height": 7,
-		"cam_acceleration": 60,
-		"panel_position": {"x": -2, "y": 3, "z": -1}
+		"panel_position": {"x": 5, "y": 3, "z": 5}
 	},
 	{
 		"src": "/models/auditorium/auditorium_natural_light_metashape_0_01_decimated.glb",
@@ -69,15 +42,41 @@
 		"spawnpoint" : {"x":0, "y":7, "z":0},
 		"cam_height": 7,
 		"cam_acceleration": 60,
-		"panel_position": {"x": -2, "y": 3, "z": -1}
+		"panel_position": {"x": 5, "y": 5, "z": 0}
 	},
 	{
-		"src": "/models/auditorium_lidar/auditorium_lidar.glb",
-		"nav_src": "/models/auditorium_lidar/auditorium_lidar_navmesh.glb",
+		"src": "/models/auditorium/auditorium_natural_light_metashape_0_1_decimated.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
 		"scale" : 3,
 		"spawnpoint" : {"x":0, "y":7, "z":0},
 		"cam_height": 7,
 		"cam_acceleration": 60,
-		"panel_position": {"x": 5, "y": 3, "z": 5}
+		"panel_position": {"x": 5, "y": 5, "z": 0}
+	},
+	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape_0_2_decimated.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60,
+		"panel_position": {"x": 5, "y": 5, "z": 0}
+	},	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape_0_4_decimated.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60,
+		"panel_position": {"x": 5, "y": 5, "z": 0}
+	},
+	{
+		"src": "/models/auditorium/auditorium_natural_light_metashape.glb",
+		"nav_src": "/models/auditorium/auditorium_natural_light_metashape_navmesh.glb",
+		"scale" : 3,
+		"spawnpoint" : {"x":0, "y":7, "z":0},
+		"cam_height": 7,
+		"cam_acceleration": 60,
+		"panel_position": {"x": 5, "y": 5, "z": 0}
 	}
 ]
